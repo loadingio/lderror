@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+mkdir -p dist
+echo "build src/lde.ls -> dist/lde.js ..."
+./node_modules/.bin/lsc -cbp src/lde.ls > dist/lde.js
+echo "minifying lde.js ..."
+./node_modules/.bin/uglifyjs dist/lde.js > dist/lde.min.js
+echo "done."
+
