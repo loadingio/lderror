@@ -1,6 +1,7 @@
 (->
   code = do
     0: "unknown error"
+    99: "canceled" # action canceled.
     100: "user not login"
 
   ldError = (opt="", id = 0) ->

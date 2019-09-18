@@ -3,6 +3,7 @@
   var code, ldError;
   code = {
     0: "unknown error",
+    99: "canceled",
     100: "user not login"
   };
   ldError = function(opt, id){
