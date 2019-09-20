@@ -3,6 +3,7 @@
     0: "unknown error"
     99: "canceled" # action canceled.
     100: "user not login"
+    # 400 ~ 599: preserved for http code
 
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
