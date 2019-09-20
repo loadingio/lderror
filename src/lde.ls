@@ -1,9 +1,9 @@
 (->
   code = do
     0: "unknown error"
-    99: "canceled" # action canceled.
-    100: "user not login"
     # 400 ~ 599: preserved for http code
+    999: "canceled" # action canceled.
+    1000: "user not login"
 
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
