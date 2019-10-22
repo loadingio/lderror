@@ -4,6 +4,8 @@
     # 400 ~ 599: preserved for http code
     999: "canceled" # action canceled.
     1000: "user not login"
+    1001: "suspicious user"
+    1002: "unknown error" # for suspicious user
 
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}

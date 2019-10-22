@@ -4,7 +4,9 @@
   code = {
     0: "unknown error",
     999: "canceled",
-    1000: "user not login"
+    1000: "user not login",
+    1001: "suspicious user",
+    1002: "unknown error"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
