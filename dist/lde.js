@@ -8,7 +8,7 @@
     1001: "suspicious user",
     1002: "unknown error",
     1003: "image process failed",
-    1004: "usage exceeded"
+    1004: "quota exceeded"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
