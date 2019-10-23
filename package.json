@@ -1,6 +1,6 @@
 {
-  "author": "Kirby Wu",
-  "name": "ldError",
+  "author": "zbryikt",
+  "name": "lderror",
   "license": "MIT",
   "description": "simple wrapper for Error Object",
   "version": "0.0.1",
