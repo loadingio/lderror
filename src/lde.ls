@@ -6,6 +6,7 @@
     1000: "user not login"
     1001: "suspicious user"
     1002: "unknown error" # for suspicious user
+    1003: "image process failed"
 
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
