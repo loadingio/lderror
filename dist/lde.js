@@ -32,7 +32,7 @@
   if (typeof module != 'undefined' && module !== null) {
     module.exports = ldError;
   }
-  if (window) {
+  if (typeof window != 'undefined' && window !== null) {
     return window.ldError = ldError;
   }
 })();

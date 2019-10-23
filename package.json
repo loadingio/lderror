@@ -2,6 +2,7 @@
   "author": "zbryikt",
   "name": "lderror",
   "license": "MIT",
+  "main": "dist/lde.js",
   "description": "simple wrapper for Error Object",
   "version": "0.0.1",
   "homepage": "https://github.com/loadingio/ldError",

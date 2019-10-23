@@ -19,5 +19,5 @@
   ldError.prototype = Object.create(Error.prototype) <<< do
     name: \ldError
   if module? => module.exports = ldError
-  if window => window.ldError = ldError
+  if window? => window.ldError = ldError
 )!
