@@ -8,6 +8,7 @@
     1002: "unknown error" # for suspicious user
     1003: "image process failed"
     1004: "quota exceeded"
+    1005: "csrftoken mismatch"
 
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
