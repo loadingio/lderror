@@ -9,7 +9,9 @@
     1002: "unknown error",
     1003: "image process failed",
     1004: "quota exceeded",
-    1005: "csrftoken mismatch"
+    1005: "csrftoken mismatch",
+    1006: "timeout",
+    1007: "server down"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
