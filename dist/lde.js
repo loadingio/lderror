@@ -11,7 +11,8 @@
     1004: "quota exceeded",
     1005: "csrftoken mismatch",
     1006: "timeout",
-    1007: "server down"
+    1007: "server down",
+    1008: "unable to parse user data"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
@@ -19,8 +20,10 @@
     if (typeof opt === 'string') {
       this.message = opt;
       this.id = id;
+    } else if (opt instanceof Error) {
+      (this.stack = opt.stack, this.message = opt.message, this).id = id || 0;
     } else if (typeof opt === 'object') {
-      import$((this.id = 0, this), opt);
+      import$(this, opt).id = id || 0;
     } else if (typeof opt === 'number') {
       this.id = opt;
     }

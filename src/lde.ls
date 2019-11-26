@@ -11,10 +11,12 @@
     1005: "csrftoken mismatch"
     1006: "timeout"
     1007: "server down"
+    1008: "unable to parse user data"
 
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
-    else if typeof(opt) == \object => @ <<< {id: 0} <<< opt
+    else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}
+    else if typeof(opt) == \object => @ <<< opt <<< {id: id or 0}
     else if typeof(opt) == \number => @id = opt
     if !(@message?) => @message = idmap[@id or 0]
     @stack = (new Error!).stack
