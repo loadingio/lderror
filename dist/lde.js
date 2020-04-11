@@ -12,7 +12,10 @@
     1005: "csrftoken mismatch",
     1006: "timeout",
     1007: "server down",
-    1008: "unable to parse user data"
+    1008: "unable to parse user data",
+    1009: "bot",
+    1010: "recaptcha error",
+    1011: "resouce conflict"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");

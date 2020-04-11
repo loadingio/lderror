@@ -12,7 +12,9 @@
     1006: "timeout"
     1007: "server down"
     1008: "unable to parse user data"
-
+    1009: "bot"
+    1010: "recaptcha error"
+    1011: "resouce conflict"
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
     else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}
