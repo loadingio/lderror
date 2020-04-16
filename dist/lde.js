@@ -15,7 +15,8 @@
     1008: "unable to parse user data",
     1009: "bot",
     1010: "recaptcha error",
-    1011: "resouce conflict"
+    1011: "resouce conflict",
+    1012: "permission denied"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
@@ -26,7 +27,7 @@
     } else if (opt instanceof Error) {
       (this.stack = opt.stack, this.message = opt.message, this).id = id || 0;
     } else if (typeof opt === 'object') {
-      import$(this, opt).id = id || 0;
+      import$(this, opt).id = opt.id || id || 0;
     } else if (typeof opt === 'number') {
       this.id = opt;
     }
