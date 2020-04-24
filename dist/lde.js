@@ -58,6 +58,12 @@
       }, ref$.id = this.id, ref$.message = this.message, ref$.stack = this.stack, ref$;
     }
   });
+  ldError.id = function(opt){
+    if (typeof opt === 'object' && opt.name === 'ldError' && opt.id) {
+      return opt.id;
+    }
+    return 0;
+  };
   if (typeof module != 'undefined' && module !== null) {
     module.exports = ldError;
   }

@@ -37,6 +37,11 @@
       if opt.stack? and !opt.stack => delete obj.stack
       JSON.stringify(obj)
     toObject: -> {name: @name} <<< @{id, message, stack}
+
+  ldError.id = (opt) ->
+    if typeof(opt) == \object and opt.name == \ldError and opt.id => return opt.id
+    return 0
+
   if module? => module.exports = ldError
   if window? => window.ldError = ldError
 )!
