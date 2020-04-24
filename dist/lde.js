@@ -15,8 +15,10 @@
     1008: "unable to parse user data",
     1009: "bot",
     1010: "recaptcha error",
-    1011: "resouce conflict",
-    1012: "permission denied"
+    1011: "resource conflict",
+    1012: "permission denied",
+    1013: "expire",
+    1014: "apply for a resource that already exists"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
@@ -35,6 +37,7 @@
       this.message = idmap[this.id || 0];
     }
     this.stack = new Error().stack;
+    this.name = ldError.prototype.name;
     return this;
   };
   ldError.prototype = import$(Object.create(Error.prototype), {

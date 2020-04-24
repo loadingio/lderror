@@ -14,8 +14,10 @@
     1008: "unable to parse user data"
     1009: "bot"
     1010: "recaptcha error"
-    1011: "resouce conflict"
+    1011: "resource conflict"
     1012: "permission denied"
+    1013: "expire"
+    1014: "apply for a resource that already exists"
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
     else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}
@@ -23,6 +25,8 @@
     else if typeof(opt) == \number => @id = opt
     if !(@message?) => @message = idmap[@id or 0]
     @stack = (new Error!).stack
+    # otherwise stringify wont keep the name
+    @name = ldError.prototype.name
     @
 
   ldError.prototype = Object.create(Error.prototype) <<< do
