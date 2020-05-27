@@ -18,7 +18,8 @@
     1011: "resource conflict",
     1012: "permission denied",
     1013: "expire",
-    1014: "apply for a resource that already exists"
+    1014: "apply for a resource that already exists",
+    1015: "bad parameter"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");

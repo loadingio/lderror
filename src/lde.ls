@@ -18,6 +18,7 @@
     1012: "permission denied"
     1013: "expire"
     1014: "apply for a resource that already exists"
+    1015: "bad parameter"
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
     else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}
