@@ -19,7 +19,8 @@
     1012: "permission denied",
     1013: "expire",
     1014: "apply for a resource that already exists",
-    1015: "bad parameter"
+    1015: "bad parameter",
+    1016: "feature not yet available"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
