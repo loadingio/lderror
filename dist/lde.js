@@ -20,7 +20,9 @@
     1013: "expire",
     1014: "apply for a resource that already exists",
     1015: "bad parameter",
-    1016: "feature not yet available"
+    1016: "feature not yet available",
+    1017: "resource corrupted",
+    1018: "no consent"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
