@@ -22,7 +22,8 @@
     1015: "bad parameter",
     1016: "feature not yet available",
     1017: "resource corrupted",
-    1018: "no consent"
+    1018: "no consent",
+    1019: "wrong domain"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
