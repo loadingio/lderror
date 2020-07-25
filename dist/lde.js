@@ -23,7 +23,8 @@
     1016: "feature not yet available",
     1017: "resource corrupted",
     1018: "no consent",
-    1019: "wrong domain"
+    1019: "wrong domain",
+    1020: "not supported"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
