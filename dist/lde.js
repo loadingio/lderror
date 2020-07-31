@@ -70,6 +70,9 @@
     }
     return 0;
   };
+  ldError.reject = function(opt, id){
+    return Promise.reject(new ldError(opt, id));
+  };
   if (typeof module != 'undefined' && module !== null) {
     module.exports = ldError;
   }

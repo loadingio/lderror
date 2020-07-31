@@ -48,6 +48,8 @@
     if typeof(opt) == \object and opt.name == \ldError and opt.id => return opt.id
     return 0
 
+  ldError.reject = (opt,id) -> Promise.reject new ldError(opt,id)
+
   if module? => module.exports = ldError
   if window? => window.ldError = ldError
 )!
