@@ -12,12 +12,7 @@ ldError contains an `id` field for identify what kind of error it is. to create 
  * new Error("custom message");
    - by default, id will be 0.
 
-valid ldError object contains a field 'name' with value 'ldError', and an id field with values listed in `src/lde.ls`. One can fetch the id from a valid ldError by accessing `id` field after verifying the `name` field, or use this handy function `ldError.id`:
-
-    ldError.id(input)
-
-It will return 0 for non-ldError objects or strings, and return corresponding id if input is a ldError object.
-
+valid ldError object contains a field 'name' with value 'ldError', and an id field with values listed in `src/lde.ls`.
 
 ## Members
 
@@ -26,6 +21,19 @@ It will return 0 for non-ldError objects or strings, and return corresponding id
  * stack - stacktrace (optional)
  * code - http status code, if applicable (optional)
 
+
+## Helper Functions
+
+ldError exports several help functions for making use ldError easier:
+
+ * `ldError.id(input)`
+   - One can fetch the id from a valid ldError by accessing `id` field after verifying the `name` field, or use this handy function `ldError.id`:
+
+         ldError.id(input)
+
+     It will return 0 for non-ldError objects or strings, and return corresponding id if input is a ldError object.
+ * `ldError.reject(...)`
+   - For a shorthand of `Promise.reject(new ldError(...))`, one can use `ldError.reject(...)`.
 
 
 ## License
