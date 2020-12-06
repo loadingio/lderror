@@ -6,13 +6,20 @@ Simple wrapper for Error object.
 
 ldError contains an `id` field for identify what kind of error it is. to create a ldError object, simply:
 
- * new Error(1000);
- * new Error("custom message", 1000);
- * new Error({message: "custom message", id: 1000});
- * new Error("custom message");
+ * new ldError(1000);
+ * new ldError("custom message", 1000);
+ * new ldError({message: "custom message", id: 1000});
+ * new ldError("custom message");
    - by default, id will be 0.
 
-valid ldError object contains a field 'name' with value 'ldError', and an id field with values listed in `src/lde.ls`.
+valid ldError object contains a field 'name' with value 'ldError', and an id field with values listed in `src/lde.ls`. Following demonstrates how to make a ldError-compatible error object with id 1000:
+
+    new Error! <<< {id: 1000, name: "ldError"}
+
+or
+
+    Object.assign(new Error(), {id: 1000, name: "ldError"});
+
 
 ## Members
 
