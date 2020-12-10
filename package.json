@@ -3,6 +3,9 @@
   "name": "lderror",
   "license": "MIT",
   "main": "dist/lde.js",
+  "files": [
+    "dist/**/*"
+  ],
   "description": "simple wrapper for Error Object",
   "version": "0.0.5",
   "homepage": "https://github.com/loadingio/ldError",
