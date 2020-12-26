@@ -25,6 +25,7 @@
     1019: "wrong domain"
     1020: "not supported"
     1021: "email not verified"
+    1022: "missing dependency"
   ldError = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
     else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}

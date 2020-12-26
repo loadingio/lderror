@@ -24,7 +24,9 @@
     1017: "resource corrupted",
     1018: "no consent",
     1019: "wrong domain",
-    1020: "not supported"
+    1020: "not supported",
+    1021: "email not verified",
+    1022: "missing dependency"
   };
   ldError = function(opt, id){
     opt == null && (opt = "");
