@@ -26,7 +26,7 @@
     1020: "not supported"
     1021: "email not verified"
     1022: "missing dependency"
-  ldError = (opt="", id = 0) ->
+  lderror = (opt="", id = 0) ->
     if typeof(opt) == \string => @ <<< {message: opt, id}
     else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}
     else if typeof(opt) == \object => @ <<< opt <<< {id: opt.id or id or 0}
@@ -34,24 +34,24 @@
     if !(@message?) => @message = idmap[@id or 0]
     @stack = (new Error!).stack
     # otherwise stringify wont keep the name
-    @name = ldError.prototype.name
+    @name = lderror.prototype.name
     @
 
-  ldError.prototype = Object.create(Error.prototype) <<< do
+  lderror.prototype = Object.create(Error.prototype) <<< do
     # code: 400 # code member preserved for http status code
-    name: \ldError
+    name: \lderror
     toString: (opt = {}) ->
       obj = @toObject!
       if opt.stack? and !opt.stack => delete obj.stack
       JSON.stringify(obj)
     toObject: -> {name: @name} <<< @{id, message, stack}
 
-  ldError.id = (opt) ->
-    if typeof(opt) == \object and opt.name == \ldError and opt.id => return opt.id
+  lderror.id = (opt) ->
+    if typeof(opt) == \object and opt.name == \lderror and opt.id => return opt.id
     return 0
 
-  ldError.reject = (opt,id) -> Promise.reject new ldError(opt,id)
+  lderror.reject = (opt,id) -> Promise.reject new lderror(opt,id)
 
-  if module? => module.exports = ldError
-  if window? => window.ldError = ldError
+  if module? => module.exports = lderror
+  if window? => window.lderror = lderror
 )!
