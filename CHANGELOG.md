@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.1.0
+
+ - rename `lde.js` to `index.js`
+
+
 ## v1.0.1
 
  - overwrite `message` not only if it's undefined but also if it's empty
