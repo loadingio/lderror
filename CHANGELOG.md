@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.1.1
+
+ - fix bug: main file should point to `index.js`, instead of `lde.js` now.
+
+
 ## v1.1.0
 
  - rename `lde.js` to `index.js`

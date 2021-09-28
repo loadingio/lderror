@@ -2,7 +2,7 @@
   "author": "zbryikt",
   "name": "lderror",
   "license": "MIT",
-  "main": "dist/lde.js",
+  "main": "dist/index.js",
   "files": [
     "dist/**/*"
   ],
