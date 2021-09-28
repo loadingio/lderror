@@ -31,7 +31,7 @@
     else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}
     else if typeof(opt) == \object => @ <<< opt <<< {id: opt.id or id or 0}
     else if typeof(opt) == \number => @id = opt
-    if !(@message?) => @message = idmap[@id or 0]
+    if !(@message) => @message = idmap[@id or 0]
     @stack = (new Error!).stack
     # otherwise stringify wont keep the name
     @name = lderror.prototype.name
@@ -53,5 +53,5 @@
   lderror.reject = (opt,id) -> Promise.reject new lderror(opt,id)
 
   if module? => module.exports = lderror
-  if window? => window.lderror = lderror
+  else if window? => window.lderror = lderror
 )!
