@@ -1,5 +1,12 @@
 # Change Logs
 
+## v1.1.2
+
+ - prevent potential prototype pollution issue
+ - unwrap in code, instead wrap with compiler
+ - no print livescript header
+
+
 ## v1.1.1
 
  - fix bug: main file should point to `index.js`, instead of `lde.js` now.

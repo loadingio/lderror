@@ -2,7 +2,7 @@
 rm -rf dist
 mkdir -p dist
 echo "build src/lde.ls -> dist/index.js ..."
-./node_modules/.bin/lsc -cbp src/lde.ls > dist/index.js
+./node_modules/.bin/lsc -cp --no-header src/lde.ls > dist/index.js
 echo "minifying index.js ..."
 ./node_modules/.bin/uglifyjs dist/index.js > dist/index.min.js
 echo "done."
