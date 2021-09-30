@@ -37,6 +37,8 @@
     } else if (opt instanceof Error) {
       (this.stack = opt.stack, this.message = opt.message, this).id = id || 0;
     } else if (typeof opt === 'object') {
+      delete opt.__proto__;
+      delete opt.constructor;
       import$(this, opt).id = opt.id || id || 0;
     } else if (typeof opt === 'number') {
       this.id = opt;
