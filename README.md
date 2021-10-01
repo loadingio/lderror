@@ -10,6 +10,7 @@ lderror contains an `id` field for identify what kind of error it is. to create 
     new lderror("custom message", 1000);
     new lderror({message: "custom message", id: 1000});
     lderror(1000); /* auto new upon invocation */
+    lderror(1002,"additional information")
     lderror("custom message"); /* by default, id will be 0 */
 
 valid lderror object contains a field 'name' with value 'lderror', and an id field with values listed in `src/lde.ls`. Following demonstrates how to make a lderror-compatible error object with id 1000 by duck typing:

@@ -35,7 +35,9 @@ lderror = (opt="", id = 0) ->
     delete opt.__proto__
     delete opt.constructor
     @ <<< opt <<< {id: opt.id or id or 0}
-  else if typeof(opt) == \number => @id = opt
+  else if typeof(opt) == \number =>
+    @id = opt
+    if typeof(id) == \string => @message = id
   if !(@message) => @message = idmap[@id or 0] or idmap.0
   @stack = (new Error!).stack
   # otherwise stringify wont keep the name

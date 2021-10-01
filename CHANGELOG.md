@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.1.5
+
+ - also support pattern like `lderror(1000, "message")`
+
+
 ## v1.1.4
 
  - return unknown lderror with unrecognized id.

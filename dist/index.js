@@ -45,6 +45,9 @@
       import$(this, opt).id = opt.id || id || 0;
     } else if (typeof opt === 'number') {
       this.id = opt;
+      if (typeof id === 'string') {
+        this.message = id;
+      }
     }
     if (!this.message) {
       this.message = idmap[this.id || 0] || idmap[0];
