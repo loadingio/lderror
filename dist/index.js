@@ -30,6 +30,9 @@
   lderror = function(opt, id){
     opt == null && (opt = "");
     id == null && (id = 0);
+    if (!(this instanceof lderror)) {
+      return new lderror(opt, id);
+    }
     if (typeof opt === 'string') {
       this.message = opt;
       this.id = id;

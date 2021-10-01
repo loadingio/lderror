@@ -27,6 +27,7 @@ idmap = do
   1022: "missing dependency"
 
 lderror = (opt="", id = 0) ->
+  if !(@ instanceof lderror) => return new lderror(opt, id)
   if typeof(opt) == \string => @ <<< {message: opt, id}
   else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}
   else if typeof(opt) == \object =>

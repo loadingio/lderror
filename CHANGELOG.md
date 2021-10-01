@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.1.3
+
+ - support constructing via function invocation.
+
+
 ## v1.1.2
 
  - prevent potential prototype pollution issue
