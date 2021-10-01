@@ -1,5 +1,5 @@
 idmap = do
-  0: "unknown error"
+  0: "unknown lderror"
   # 400 ~ 599: preserved for http code
   999: "canceled" # action canceled.
   1000: "user not login"
@@ -25,6 +25,7 @@ idmap = do
   1020: "not supported"
   1021: "email not verified"
   1022: "missing dependency"
+  1023: "lderror testing"
 
 lderror = (opt="", id = 0) ->
   if !(@ instanceof lderror) => return new lderror(opt, id)
@@ -35,7 +36,7 @@ lderror = (opt="", id = 0) ->
     delete opt.constructor
     @ <<< opt <<< {id: opt.id or id or 0}
   else if typeof(opt) == \number => @id = opt
-  if !(@message) => @message = idmap[@id or 0]
+  if !(@message) => @message = idmap[@id or 0] or idmap.0
   @stack = (new Error!).stack
   # otherwise stringify wont keep the name
   @name = lderror.prototype.name

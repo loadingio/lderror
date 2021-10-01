@@ -1,7 +1,7 @@
 (function(){
   var idmap, lderror;
   idmap = {
-    0: "unknown error",
+    0: "unknown lderror",
     999: "canceled",
     1000: "user not login",
     1001: "suspicious user",
@@ -25,7 +25,8 @@
     1019: "wrong domain",
     1020: "not supported",
     1021: "email not verified",
-    1022: "missing dependency"
+    1022: "missing dependency",
+    1023: "lderror testing"
   };
   lderror = function(opt, id){
     opt == null && (opt = "");
@@ -46,7 +47,7 @@
       this.id = opt;
     }
     if (!this.message) {
-      this.message = idmap[this.id || 0];
+      this.message = idmap[this.id || 0] || idmap[0];
     }
     this.stack = new Error().stack;
     this.name = lderror.prototype.name;

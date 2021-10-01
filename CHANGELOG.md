@@ -1,5 +1,11 @@
 # Change Logs
 
+## v1.1.4
+
+ - return unknown lderror with unrecognized id.
+ - add 1023 `lderror testing` error
+
+
 ## v1.1.3
 
  - support constructing via function invocation.
