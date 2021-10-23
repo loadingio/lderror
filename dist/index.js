@@ -26,7 +26,8 @@
     1020: "not supported",
     1021: "email not verified",
     1022: "missing dependency",
-    1023: "lderror testing"
+    1023: "lderror testing",
+    1024: "limited by throttling"
   };
   lderror = function(opt, id){
     opt == null && (opt = "");

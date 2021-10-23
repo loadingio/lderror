@@ -1,5 +1,10 @@
 # Change Logs
 
+## v1.1.6 (upcoming)
+
+ - add 1024 `limited by throttling`
+
+
 ## v1.1.5
 
  - also support pattern like `lderror(1000, "message")`
