@@ -2,6 +2,7 @@
   var idmap, lderror;
   idmap = {
     0: "unknown lderror",
+    998: "skipped",
     999: "canceled",
     1000: "user not login",
     1001: "suspicious user",

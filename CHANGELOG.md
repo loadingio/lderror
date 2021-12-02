@@ -3,7 +3,7 @@
 ## v1.1.6 (upcoming)
 
  - add 1024 `limited by throttling`
-
+ - add 998 `skipped`
 
 ## v1.1.5
 
