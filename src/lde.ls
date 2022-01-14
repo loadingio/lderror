@@ -28,6 +28,7 @@ idmap = do
   1022: "missing dependency"
   1023: "lderror testing"
   1024: "limited by throttling"
+  1025: "runtime error"
 
 lderror = (opt="", id = 0) ->
   if !(@ instanceof lderror) => return new lderror(opt, id)

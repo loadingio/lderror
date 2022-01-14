@@ -4,6 +4,8 @@
 
  - add 1024 `limited by throttling`
  - add 998 `skipped`
+ - add 1025 `runtime error`
+
 
 ## v1.1.5
 
