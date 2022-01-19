@@ -1,10 +1,15 @@
 # Change Logs
 
-## v1.1.6 (upcoming)
+## v2.0.0
 
  - add 1024 `limited by throttling`
  - add 998 `skipped`
  - add 1025 `runtime error`
+ - upgrade modules
+ - release with compact directory structure
+ - add `browser` field in `package.json`.
+ - further minimize generated js file with mangling and compression
+
 
 
 ## v1.1.5
