@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.0.1
+
+ - include `id` in dummy message if message is not found for specific id.
+
+
 ## v2.0.0
 
  - add 1024 `limited by throttling`

@@ -41,7 +41,10 @@ lderror = (opt="", id = 0) ->
   else if typeof(opt) == \number =>
     @id = opt
     if typeof(id) == \string => @message = id
-  if !(@message) => @message = idmap[@id or 0] or idmap.0
+    if !(@message) =>
+      @message = if idmap[@id or 0] => that
+      else if @id >= 100 and @id < 600 => "http code: #{@id}"
+      else "#{idmap.0} (id: #{@id or 0})"
   @stack = (new Error!).stack
   # otherwise stringify wont keep the name
   @name = lderror.prototype.name

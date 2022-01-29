@@ -32,6 +32,7 @@
     1025: "runtime error"
   };
   lderror = function(opt, id){
+    var that;
     opt == null && (opt = "");
     id == null && (id = 0);
     if (!(this instanceof lderror)) {
@@ -51,9 +52,13 @@
       if (typeof id === 'string') {
         this.message = id;
       }
-    }
-    if (!this.message) {
-      this.message = idmap[this.id || 0] || idmap[0];
+      if (!this.message) {
+        this.message = (that = idmap[this.id || 0])
+          ? that
+          : this.id >= 100 && this.id < 600
+            ? "http code: " + this.id
+            : idmap[0] + " (id: " + (this.id || 0) + ")";
+      }
     }
     this.stack = new Error().stack;
     this.name = lderror.prototype.name;
