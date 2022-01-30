@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.0.2 (upcoming) 
+
+ - fix typo in 1010 error ( `recaptcha` to `captcha` )
+
+
 ## v2.0.1
 
  - include `id` in dummy message if message is not found for specific id.

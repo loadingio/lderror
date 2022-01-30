@@ -13,7 +13,7 @@ idmap = do
   1007: "server down"
   1008: "unable to parse user data"
   1009: "bot"
-  1010: "recaptcha error"
+  1010: "captcha error"
   1011: "resource conflict"
   1012: "permission denied"
   1013: "expire"
