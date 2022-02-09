@@ -74,7 +74,7 @@ lderror.handler = (o={}) ->
   h = (e) ~>
     if (i = lderror.id(e)) in @i => return
     @s[i] = 1
-    @h(@r i).then ~> @s[i] = 0
+    @h(@r(i),e).then ~> @s[i] = 0
     if !i => console.log e
   h.is-on = ~> !![v for k,v of @s].filter((v)->v).length
   h

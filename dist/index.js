@@ -106,7 +106,7 @@
         return;
       }
       this$.s[i] = 1;
-      this$.h(this$.r(i)).then(function(){
+      this$.h(this$.r(i), e).then(function(){
         return this$.s[i] = 0;
       });
       if (!i) {
