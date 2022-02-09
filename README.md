@@ -34,14 +34,53 @@ or
 
 lderror exports several help functions for making use lderror easier:
 
- * `lderror.id(input)`
-   - One can fetch the id from a valid lderror by accessing `id` field after verifying the `name` field, or use this handy function `lderror.id`:
+ - `lderror.id(err)`: get the id for an error object `err`.
+   - return value:
+     - `err.id` if `err` is a valid `lderror` object and `lderror.id` is defined.
+     - otherwise, 0
+   - alternatively you can get `id` by accessing `err.id` directly - while this is not recommended..
+ - `lderror.reject(...)`: shorthand for `Promise.reject(new lderror(...))`
+ - `lderror.handler(opt)`: a constructor function. when constructed, return an error handler
+   - return a function `func(err)` for handling `err`. this function also exposes below method:
+     - `isOn()`: return true if there are any ongoing errors, otherwise false.
+   - options:
+     - `ignore`: a list of id to ignore in this handler. error `999` is always ignored.
+     - `rule(id)`: convert an error `id` to an user-defined object `o`, which is passed to `handler` below.
+       - by default, `rule` is `function(id) { return id; }`
+     - `handler(o, e)`: a actual handler for handling the given error
+       - should return a promise.
+       - options:
+         - `o`: user-defined object returned by `rule(id)`.
+         - `e`: the original error object.
 
-         lderror.id(input)
 
-     It will return 0 for non-lderror objects or strings, and return corresponding id if input is a lderror object.
- * `lderror.reject(...)`
-   - For a shorthand of `Promise.reject(new lderror(...))`, one can use `lderror.reject(...)`.
+### Error Handler
+
+A sample scenario of using `lderror.handler`:
+
+    handler = new lderror.handler({
+      handler: function(o,e) {
+        return Promise.resolve(alert("error: ", o, e));
+      }
+    });
+
+    doSomething(...)
+      .then(...)
+      .catch(handler);
+
+
+Work along with `@plotdb/block` + `ldcvmgr`:
+
+    @manager = new block.manager!
+    @ldcvmgr = new ldcvmgr {manager}
+    handler = new lderror.handler do
+      ignore: <[1005 1004] >
+      handler: (~> @ldcvmgr.toggle it )
+      rule: (id) -> "error/#id"
+
+    doSomething ...
+      .then ...
+      .catch handler
 
 
 ## Customized information
