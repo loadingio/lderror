@@ -91,6 +91,45 @@
   lderror.reject = function(opt, id){
     return Promise.reject(new lderror(opt, id));
   };
+  lderror.handler = function(o){
+    o == null && (o = {});
+    this._i = (o.ignore || []).concat([999]);
+    this._h = o.handler;
+    this._r = o.rule || function(it){
+      return it;
+    };
+    this._s = {};
+    return this;
+  };
+  lderror.handler.prototype = import$(Object.create(Object.prototype), {
+    handler: function(e){
+      var i, this$ = this;
+      i = lderror.id(e) || 0;
+      if (in$(i, this._i)) {
+        return;
+      }
+      this._s[id] = 1;
+      this.h(this._r(i)).then(function(){
+        return this$._s[i] = 0;
+      });
+      if (!i) {
+        return console.log(e);
+      }
+    },
+    isOn: function(){
+      var k, v;
+      return !!(function(){
+        var ref$, results$ = [];
+        for (k in ref$ = this._s) {
+          v = ref$[k];
+          results$.push(v);
+        }
+        return results$;
+      }.call(this)).filter(function(it){
+        return it;
+      }).length;
+    }
+  });
   if (typeof module != 'undefined' && module !== null) {
     module.exports = lderror;
   } else if (typeof window != 'undefined' && window !== null) {
@@ -100,5 +139,10 @@
     var own = {}.hasOwnProperty;
     for (var key in src) if (own.call(src, key)) obj[key] = src[key];
     return obj;
+  }
+  function in$(x, xs){
+    var i = -1, l = xs.length >>> 0;
+    while (++i < l) if (x === xs[i]) return true;
+    return false;
   }
 }).call(this);

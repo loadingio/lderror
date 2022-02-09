@@ -65,5 +65,22 @@ lderror.id = (opt) ->
 
 lderror.reject = (opt,id) -> Promise.reject new lderror(opt,id)
 
+lderror.handler = (o={}) ->
+  # _i: list of id to ignore
+  @_i = (o.ignore or []) ++ [999]
+  @_h = o.handler
+  @_r = o.rule or (->it)
+  @_s = {}
+  @
+
+lderror.handler.prototype = Object.create(Object.prototype) <<< do
+  handler: (e) ->
+    i = lderror.id(e) or 0
+    if i in @_i => return
+    @_s[id] = 1
+    @h(@_r i).then ~> @_s[i] = 0
+    if !i => console.log e
+  is-on: -> !![v for k,v of @_s].filter(-> it).length
+
 if module? => module.exports = lderror
 else if window? => window.lderror = lderror
