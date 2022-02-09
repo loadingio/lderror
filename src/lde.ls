@@ -1,6 +1,6 @@
 idmap = do
   0: "unknown lderror"
-  # 400 ~ 599: preserved for http code
+  # 100 ~ 599: preserved for http code
   998: "skipped" # action skipped
   999: "canceled" # action canceled.
   1000: "user not login"
