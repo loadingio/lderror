@@ -92,44 +92,42 @@
     return Promise.reject(new lderror(opt, id));
   };
   lderror.handler = function(o){
+    var h, this$ = this;
     o == null && (o = {});
-    this._i = (o.ignore || []).concat([999]);
-    this._h = o.handler;
-    this._r = o.rule || function(it){
+    this.i = (o.ignore || []).concat([999]);
+    this.h = o.handler;
+    this.r = o.rule || function(it){
       return it;
     };
-    this._s = {};
-    return this;
-  };
-  lderror.handler.prototype = import$(Object.create(Object.prototype), {
-    handler: function(e){
-      var i, this$ = this;
-      i = lderror.id(e) || 0;
-      if (in$(i, this._i)) {
+    this.s = {};
+    h = function(e){
+      var i;
+      if (in$(i = lderror.id(e), this$.i)) {
         return;
       }
-      this._s[id] = 1;
-      this.h(this._r(i)).then(function(){
-        return this$._s[i] = 0;
+      this$.s[i] = 1;
+      this$.h(this$.r(i)).then(function(){
+        return this$.s[i] = 0;
       });
       if (!i) {
         return console.log(e);
       }
-    },
-    isOn: function(){
+    };
+    h.isOn = function(){
       var k, v;
       return !!(function(){
         var ref$, results$ = [];
-        for (k in ref$ = this._s) {
+        for (k in ref$ = this.s) {
           v = ref$[k];
           results$.push(v);
         }
         return results$;
-      }.call(this)).filter(function(it){
-        return it;
+      }.call(this$)).filter(function(v){
+        return v;
       }).length;
-    }
-  });
+    };
+    return h;
+  };
   if (typeof module != 'undefined' && module !== null) {
     module.exports = lderror;
   } else if (typeof window != 'undefined' && window !== null) {
