@@ -1,8 +1,11 @@
 # Change Logs
 
-## v2.0.2 (upcoming) 
+## v2.1.0 (upcoming) 
 
  - fix typo in 1010 error ( `recaptcha` to `captcha` )
+ - add `lderror.handler` for error handling
+ - update id reserved range for http code from 400 ~ 599 to 100 ~ 599
+ - upgrade cached-path-relative for vulnerability fixing
 
 
 ## v2.0.1
