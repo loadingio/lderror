@@ -1,6 +1,6 @@
 # Change Logs
 
-## v2.1.0 (upcoming) 
+## v2.1.0
 
  - fix typo in 1010 error ( `recaptcha` to `captcha` )
  - add `lderror.handler` for error handling
