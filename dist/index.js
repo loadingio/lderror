@@ -32,21 +32,22 @@
     1025: "runtime error"
   };
   lderror = function(opt, id){
-    var that;
+    var _id, that;
     opt == null && (opt = "");
     id == null && (id = 0);
     if (!(this instanceof lderror)) {
       return new lderror(opt, id);
     }
+    _id = (!isNaN(+id) ? +id : 0) || opt.id || 0;
     if (typeof opt === 'string') {
       this.message = opt;
-      this.id = id;
+      this.id = _id;
     } else if (opt instanceof Error) {
-      (this.stack = opt.stack, this.message = opt.message, this).id = id || 0;
+      (this.stack = opt.stack, this.message = opt.message, this).id = _id;
     } else if (typeof opt === 'object') {
       delete opt.__proto__;
       delete opt.constructor;
-      import$(this, opt).id = opt.id || id || 0;
+      import$(this, opt).id = _id;
     } else if (typeof opt === 'number') {
       this.id = opt;
       if (typeof id === 'string') {

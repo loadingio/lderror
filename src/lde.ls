@@ -32,12 +32,13 @@ idmap = do
 
 lderror = (opt="", id = 0) ->
   if !(@ instanceof lderror) => return new lderror(opt, id)
-  if typeof(opt) == \string => @ <<< {message: opt, id}
-  else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id:id or 0}
+  _id = (if !isNaN(+id) => +id else 0) or opt.id or 0
+  if typeof(opt) == \string => @ <<< {message: opt, id: _id}
+  else if (opt instanceof Error) => @ <<< opt{stack,message} <<< {id: _id}
   else if typeof(opt) == \object =>
     delete opt.__proto__
     delete opt.constructor
-    @ <<< opt <<< {id: opt.id or id or 0}
+    @ <<< opt <<< {id: _id}
   else if typeof(opt) == \number =>
     @id = opt
     if typeof(id) == \string => @message = id

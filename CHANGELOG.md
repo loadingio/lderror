@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.1.1
+
+ - fix bug: id is gone when wrap lderror twice ( lderror(lderror(404)) )
+
+
 ## v2.1.0
 
  - fix typo in 1010 error ( `recaptcha` to `captcha` )
