@@ -29,7 +29,8 @@
     1022: "missing dependency",
     1023: "lderror testing",
     1024: "limited by throttling",
-    1025: "runtime error"
+    1025: "runtime error",
+    1026: "not applicable"
   };
   lderror = function(opt, id){
     var _id, that;

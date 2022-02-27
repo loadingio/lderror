@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.1.2
+
+ - add 1026 `not applicable`
+
+
 ## v2.1.1
 
  - fix bug: id is gone when wrap lderror twice ( lderror(lderror(404)) )
