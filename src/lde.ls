@@ -30,6 +30,7 @@ idmap = do
   1024: "limited by throttling"
   1025: "runtime error"
   1026: "not applicable"
+  1027: "missing config"
 
 lderror = (opt="", id = 0) ->
   if !(@ instanceof lderror) => return new lderror(opt, id)

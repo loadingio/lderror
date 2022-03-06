@@ -30,7 +30,8 @@
     1023: "lderror testing",
     1024: "limited by throttling",
     1025: "runtime error",
-    1026: "not applicable"
+    1026: "not applicable",
+    1027: "missing config"
   };
   lderror = function(opt, id){
     var _id, that;
