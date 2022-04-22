@@ -1,8 +1,9 @@
 # Change Logs
 
-## v2.1.3 (upcoming)
+## v2.2.0
 
  - add 1027 `missing config`
+ - add api `message` for getting message corresponding to given id
 
 
 ## v2.1.2

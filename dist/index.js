@@ -91,6 +91,14 @@
     }
     return 0;
   };
+  lderror.message = function(o){
+    if (typeof o === 'number') {
+      return idmap[o] || idmap[0];
+    } else if (typeof o === 'object') {
+      return idmap[o.id] || idmap[0];
+    }
+    return idmap[0];
+  };
   lderror.reject = function(opt, id){
     return Promise.reject(new lderror(opt, id));
   };

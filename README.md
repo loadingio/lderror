@@ -39,6 +39,10 @@ lderror exports several help functions for making use lderror easier:
      - `err.id` if `err` is a valid `lderror` object and `lderror.id` is defined.
      - otherwise, 0
    - alternatively you can get `id` by accessing `err.id` directly - while this is not recommended..
+ - `lderror.message(err)`: get the message corresponding to input `err` where `err` is either:
+   - a number: return the message corresponding to given error id
+   - an object: return the message corresponding to `err.id`
+   - return `lderror.message(0)` if none of above, or return message of above is empty.
  - `lderror.reject(...)`: shorthand for `Promise.reject(new lderror(...))`
  - `lderror.handler(opt)`: a constructor function. when constructed, return an error handler
    - return a function `func(err)` for handling `err`. this function also exposes below method:

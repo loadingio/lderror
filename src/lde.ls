@@ -66,6 +66,11 @@ lderror.id = (opt) ->
   if typeof(opt) == \object and opt.name == \lderror and opt.id => return opt.id
   return 0
 
+lderror.message = (o) ->
+  if typeof(o) == \number => return idmap[o] or idmap.0
+  else if typeof(o) == \object => return idmap[o.id] or idmap.0
+  return idmap.0
+
 lderror.reject = (opt,id) -> Promise.reject new lderror(opt,id)
 
 lderror.handler = (o={}) ->
