@@ -24,10 +24,11 @@ or
 
 ## Members
 
- * id - lderror deined error code.
- * message - custom error message (optional)
- * stack - stacktrace (optional)
- * code - http status code, if applicable (optional)
+ - `id` - lderror deined error code.
+ - `message` - custom error message (optional)
+ - `stack` - stacktrace (optional)
+ - `code` - http status code, if applicable (optional)
+ - `log` - should this error be logged. default false. 
 
 
 ## Helper Functions
