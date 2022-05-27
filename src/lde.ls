@@ -31,6 +31,7 @@ idmap = do
   1025: "runtime error"
   1026: "not applicable"
   1027: "missing config"
+  1028: "resource unavailable"
 
 lderror = (opt="", id = 0) ->
   if !(@ instanceof lderror) => return new lderror(opt, id)
