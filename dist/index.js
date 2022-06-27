@@ -31,7 +31,8 @@
     1024: "limited by throttling",
     1025: "runtime error",
     1026: "not applicable",
-    1027: "missing config"
+    1027: "missing config",
+    1028: "resource unavailable"
   };
   lderror = function(opt, id){
     var _id, that;

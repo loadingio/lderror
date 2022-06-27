@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.2.1 (upcoming)
+
+ - add 1028 `resource unavailable`
+
+
 ## v2.2.0
 
  - add 1027 `missing config`
