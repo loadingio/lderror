@@ -49,9 +49,12 @@ lderror = (opt="", id = 0) ->
       @message = if idmap[@id or 0] => that
       else if @id >= 100 and @id < 600 => "http code: #{@id}"
       else "#{idmap.0} (id: #{@id or 0})"
-  @stack = (new Error!).stack
   # otherwise stringify wont keep the name
   @name = lderror.prototype.name
+  @stack = (e = (new Error!) <<< @).stack
+  # this is especially useful to handle unhandledrejection.
+  # simply throw it again gives us the full stack to trace in dev console
+  @error = e
   @
 
 lderror.prototype = Object.create(Error.prototype) <<< do
@@ -87,6 +90,26 @@ lderror.handler = (o={}) ->
     if !i => console.log e
   h.is-on = ~> !![v for k,v of @s].filter((v)->v).length
   h
+
+lderror.event-handler =
+  error: (e) ->
+    if e.error and e.error.name == \lderror and e.error.error and e.error != e.error.error =>
+      console.warn "uncaught lderror", e.error
+      console.warn "with its internal Error object thrown:"
+      e.preventDefault!
+      # add a setTimeout so it will be handled again by this handler
+      setTimeout (->throw e.error.error), 0
+      return true
+    return false
+
+  rejection: (e) ->
+    if e.reason and e.reason.name == \lderror and e.reason.error =>
+      console.warn "Unhandled rejection with lderror:", e.reason
+      console.warn "with its internal Error object thrown:"
+      throw e.reason.error
+      e.preventDefault!
+      return true
+    return false
 
 if module? => module.exports = lderror
 else if window? => window.lderror = lderror

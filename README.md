@@ -24,11 +24,12 @@ or
 
 ## Members
 
- - `id` - lderror deined error code.
- - `message` - custom error message (optional)
- - `stack` - stacktrace (optional)
- - `code` - http status code, if applicable (optional)
- - `log` - should this error be logged. default false. 
+ - `id`: lderror deined error code.
+ - `message`: custom error message (optional)
+ - `stack`: stacktrace (optional)
+ - `code`: http status code, if applicable (optional)
+ - `log`: should this error be logged. default false.
+ - `error`: an Error object constructed
 
 
 ## Helper Functions
@@ -57,6 +58,11 @@ lderror exports several help functions for making use lderror easier:
        - options:
          - `o`: user-defined object returned by `rule(id)`.
          - `e`: the original error object.
+ - `lderror.eventHandler`: helper event handler. See below section for more information.
+   - `eventHandler` provides two member functions:
+     - `error(evt)`: handler for `error` event.
+     - `rejection(evt)`: handler for `unhandledrejection` event.
+   - for both functions, return true if `lderror` is handled. otherwise false.
 
 
 ### Error Handler
@@ -95,11 +101,27 @@ Work along with `@plotdb/block` + `ldcvmgr`:
       .catch handler
 
 
+## error / unhandledrejection events
+
+You can use `lderror.eventHandler.error` and `lderror.eventHandler.rejection` to take care of lderror related errors:
+
+    window.addEventListenen("error", lderror.eventHandler.error);
+    window.addEventListenen("unhandledrejection", lderror.eventHandler.rejection);
+
+These handlers simply check if incoming error is a lderror with original error object; if it is, additional information is logged and the original error object will be thrown for showing stacktrace information.
+
+To wrap them along with your own event handler, test its return value and proceed if it returns `false`:
+
+    window.addEventListenen("error", function(evt) {
+      if(!lderror.eventHandler.error) { /* your own handler */ }
+    });
+
+
 ## Customized information
 
 Additional information can be added if needed:
 
- - redirect - instruct a redirect url in order to proper take care of this error. 
+ - redirect - instruct a redirect url in order to proper take care of this error.
 
 
 ## License

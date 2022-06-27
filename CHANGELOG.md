@@ -1,8 +1,10 @@
 # Change Logs
 
-## v2.2.1 (upcoming)
+## v2.3.0
 
  - add 1028 `resource unavailable`
+ - keep an original error object in `error`
+ - add event handler for taking care lderror in `error` and `unhandledrejection` events
 
 
 ## v2.2.0

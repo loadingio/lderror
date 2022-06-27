@@ -35,7 +35,7 @@
     1028: "resource unavailable"
   };
   lderror = function(opt, id){
-    var _id, that;
+    var _id, that, e;
     opt == null && (opt = "");
     id == null && (id = 0);
     if (!(this instanceof lderror)) {
@@ -64,8 +64,9 @@
             : idmap[0] + " (id: " + (this.id || 0) + ")";
       }
     }
-    this.stack = new Error().stack;
     this.name = lderror.prototype.name;
+    this.stack = (e = import$(new Error(), this)).stack;
+    this.error = e;
     return this;
   };
   lderror.prototype = import$(Object.create(Error.prototype), {
@@ -139,6 +140,30 @@
       }).length;
     };
     return h;
+  };
+  lderror.eventHandler = {
+    error: function(e){
+      if (e.error && e.error.name === 'lderror' && e.error.error && e.error !== e.error.error) {
+        console.warn("uncaught lderror", e.error);
+        console.warn("with its internal Error object thrown:");
+        e.preventDefault();
+        setTimeout(function(){
+          throw e.error.error;
+        }, 0);
+        return true;
+      }
+      return false;
+    },
+    rejection: function(e){
+      if (e.reason && e.reason.name === 'lderror' && e.reason.error) {
+        console.warn("Unhandled rejection with lderror:", e.reason);
+        console.warn("with its internal Error object thrown:");
+        throw e.reason.error;
+        e.preventDefault();
+        return true;
+      }
+      return false;
+    }
   };
   if (typeof module != 'undefined' && module !== null) {
     module.exports = lderror;
