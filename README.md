@@ -61,6 +61,13 @@ lderror exports several help functions for making use lderror easier:
 
 ### Error Handler
 
+Helper to contruct a reusable Error handler which supports:
+
+ - custom error object wrapper / converter
+ - id list of lderror to ignore
+ - customizable handler
+
+
 A sample scenario of using `lderror.handler`:
 
     handler = new lderror.handler({
@@ -79,7 +86,7 @@ Work along with `@plotdb/block` + `ldcvmgr`:
     @manager = new block.manager!
     @ldcvmgr = new ldcvmgr {manager}
     handler = new lderror.handler do
-      ignore: <[1005 1004] >
+      ignore: <[1005 1004]>
       handler: (~> @ldcvmgr.toggle it )
       rule: (id) -> "error/#id"
 
