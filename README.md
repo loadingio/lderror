@@ -24,7 +24,7 @@ or
 
 ## Members
 
- - `id`: lderror deined error code.
+ - `id`: lderror defined error code.
  - `message`: custom error message (optional)
  - `stack`: stacktrace (optional)
  - `code`: http status code, if applicable (optional)
@@ -117,11 +117,16 @@ To wrap them along with your own event handler, test its return value and procee
     });
 
 
-## Customized information
+## Customized Information
 
 Additional information can be added if needed:
 
  - redirect - instruct a redirect url in order to proper take care of this error.
+
+
+## Customized Error ID
+
+Use ID `10000` ~ `29999` for customized error.
 
 
 ## License

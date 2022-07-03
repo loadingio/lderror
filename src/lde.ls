@@ -32,6 +32,7 @@ idmap = do
   1026: "not applicable"
   1027: "missing config"
   1028: "resource unavailable"
+  # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->
   if !(@ instanceof lderror) => return new lderror(opt, id)
