@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.3.1 (upcoming)
+
+ - add 1029 `session data corrupted`
+
+
 ## v2.3.0
 
  - add 1028 `resource unavailable`

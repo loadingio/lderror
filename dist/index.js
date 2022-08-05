@@ -32,7 +32,8 @@
     1025: "runtime error",
     1026: "not applicable",
     1027: "missing config",
-    1028: "resource unavailable"
+    1028: "resource unavailable",
+    1029: "session data corrupted"
   };
   lderror = function(opt, id){
     var _id, that, e;
