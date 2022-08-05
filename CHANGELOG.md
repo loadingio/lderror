@@ -1,6 +1,6 @@
 # Change Logs
 
-## v2.3.1 (upcoming)
+## v2.3.1
 
  - add 1029 `session data corrupted`
 
