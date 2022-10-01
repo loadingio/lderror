@@ -33,6 +33,8 @@ idmap = do
   1027: "missing config"
   1028: "resource unavailable"
   1029: "session data corrupted"
+  1030: "password mismatched"
+  1031: "weak password"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->

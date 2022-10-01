@@ -33,7 +33,9 @@
     1026: "not applicable",
     1027: "missing config",
     1028: "resource unavailable",
-    1029: "session data corrupted"
+    1029: "session data corrupted",
+    1030: "password mismatched",
+    1031: "weak password"
   };
   lderror = function(opt, id){
     var _id, that, e;

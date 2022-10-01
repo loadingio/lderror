@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.3.2 (upcoming)
+
+ - add 1030 `password mismatched`, 1031 `weak password`.
+
+
 ## v2.3.1
 
  - add 1029 `session data corrupted`
