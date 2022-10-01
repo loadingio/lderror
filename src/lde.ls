@@ -35,6 +35,7 @@ idmap = do
   1029: "session data corrupted"
   1030: "password mismatched"
   1031: "weak password"
+  1032: "credential scheme mismatched"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->
