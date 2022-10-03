@@ -1,6 +1,6 @@
 # Change Logs
 
-## v2.3.2 (upcoming)
+## v2.3.2
 
  - add 1030 `password mismatched`, 1031 `weak password`.
  - add 1032 `credential scheme mismatched`
