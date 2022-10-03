@@ -4,6 +4,7 @@
 
  - add 1030 `password mismatched`, 1031 `weak password`.
  - add 1032 `credential scheme mismatched`
+ - for better exception logging, still throw error in error handler if no id for the given error
 
 
 ## v2.3.1

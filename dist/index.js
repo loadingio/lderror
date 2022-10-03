@@ -127,7 +127,8 @@
         return this$.s[i] = 0;
       });
       if (!i) {
-        return console.log(e);
+        console.log(e);
+        throw e;
       }
     };
     h.isOn = function(){
