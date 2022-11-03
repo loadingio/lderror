@@ -36,6 +36,7 @@ idmap = do
   1030: "password mismatched"
   1031: "weak password"
   1032: "credential scheme mismatched"
+  1033: "view failed to render"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->

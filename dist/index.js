@@ -36,7 +36,8 @@
     1029: "session data corrupted",
     1030: "password mismatched",
     1031: "weak password",
-    1032: "credential scheme mismatched"
+    1032: "credential scheme mismatched",
+    1033: "view failed to render"
   };
   lderror = function(opt, id){
     var _id, that, e;

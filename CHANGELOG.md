@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.3.3 (upcoming)
+
+ - add 1033 `view failed to render`
+
+
 ## v2.3.2
 
  - add 1030 `password mismatched`, 1031 `weak password`.
