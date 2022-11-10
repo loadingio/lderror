@@ -1,8 +1,9 @@
 # Change Logs
 
-## v2.3.3 (upcoming)
+## v2.3.3
 
  - add 1033 `view failed to render`
+ - fix bug: exception in unhandled rejection handler should be thrown within `setTimeout` for error to be triggered.
 
 
 ## v2.3.2

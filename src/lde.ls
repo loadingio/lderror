@@ -114,7 +114,8 @@ lderror.event-handler =
     if e.reason and e.reason.name == \lderror and e.reason.error =>
       console.warn "Unhandled rejection with lderror:", e.reason
       console.warn "with its internal Error object thrown:"
-      throw e.reason.error
+      # add a setTimeout so it will be handled again by error handler
+      setTimeout (-> throw e.reason.error), 0
       e.preventDefault!
       return true
     return false

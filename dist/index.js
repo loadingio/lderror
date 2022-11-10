@@ -164,7 +164,9 @@
       if (e.reason && e.reason.name === 'lderror' && e.reason.error) {
         console.warn("Unhandled rejection with lderror:", e.reason);
         console.warn("with its internal Error object thrown:");
-        throw e.reason.error;
+        setTimeout(function(){
+          throw e.reason.error;
+        }, 0);
         e.preventDefault();
         return true;
       }
