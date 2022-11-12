@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.3.4 (upcoming)
+
+ - add 1034 `user not found`
+
+
 ## v2.3.3
 
  - add 1033 `view failed to render`
