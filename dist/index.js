@@ -38,7 +38,8 @@
     1031: "weak password",
     1032: "credential scheme mismatched",
     1033: "view failed to render",
-    1034: "user not found"
+    1034: "user not found",
+    1035: "payment rejected"
   };
   lderror = function(opt, id){
     var _id, that, e;

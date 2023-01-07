@@ -3,6 +3,7 @@
 ## v2.3.4 (upcoming)
 
  - add 1034 `user not found`
+ - add 1035 `payment rejected`
 
 
 ## v2.3.3
