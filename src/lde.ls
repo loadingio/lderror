@@ -54,7 +54,6 @@ lderror = (opt="", id = 0) ->
     @id = opt
     if typeof(id) == \string => @message = id
     else @payload = id
-    console.log "~>", @payload, id
     if !(@message) =>
       @message = if idmap[@id or 0] => that
       else if @id >= 100 and @id < 600 => "http code: #{@id}"

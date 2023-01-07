@@ -65,7 +65,6 @@
       } else {
         this.payload = id;
       }
-      console.log("~>", this.payload, id);
       if (!this.message) {
         this.message = (that = idmap[this.id || 0])
           ? that

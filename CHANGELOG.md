@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.4.1
+
+ - remove unused log
+
+
 ## v2.4.0
 
  - add 1034 `user not found`
