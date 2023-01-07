@@ -1,9 +1,10 @@
 # Change Logs
 
-## v2.3.4 (upcoming)
+## v2.4.0
 
  - add 1034 `user not found`
  - add 1035 `payment rejected`
+ - support payload as parameter, passed along with error object
 
 
 ## v2.3.3
