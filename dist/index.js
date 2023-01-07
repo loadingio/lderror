@@ -62,7 +62,7 @@
       this.id = opt;
       if (typeof id === 'string') {
         this.message = id;
-      } else {
+      } else if (typeof id === 'object') {
         this.payload = id;
       }
       if (!this.message) {

@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.4.2
+
+ - update payload only if given parameter is an object
+
+
 ## v2.4.1
 
  - remove unused log

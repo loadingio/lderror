@@ -53,7 +53,7 @@ lderror = (opt="", id = 0) ->
   else if typeof(opt) == \number =>
     @id = opt
     if typeof(id) == \string => @message = id
-    else @payload = id
+    else if typeof(id) == \object => @payload = id
     if !(@message) =>
       @message = if idmap[@id or 0] => that
       else if @id >= 100 and @id < 600 => "http code: #{@id}"
