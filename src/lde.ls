@@ -53,6 +53,8 @@ lderror = (opt="", id = 0) ->
   else if typeof(opt) == \number =>
     @id = opt
     if typeof(id) == \string => @message = id
+    else @payload = id
+    console.log "~>", @payload, id
     if !(@message) =>
       @message = if idmap[@id or 0] => that
       else if @id >= 100 and @id < 600 => "http code: #{@id}"
@@ -72,7 +74,7 @@ lderror.prototype = Object.create(Error.prototype) <<< do
     obj = @toObject!
     if opt.stack? and !opt.stack => delete obj.stack
     JSON.stringify(obj)
-  toObject: -> {name: @name} <<< @{id, message, stack}
+  toObject: -> {name: @name} <<< @{id, message, stack, payload}
 
 lderror.id = (opt) ->
   if typeof(opt) == \object and opt.name == \lderror and opt.id => return opt.id

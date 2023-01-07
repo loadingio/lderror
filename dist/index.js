@@ -62,7 +62,10 @@
       this.id = opt;
       if (typeof id === 'string') {
         this.message = id;
+      } else {
+        this.payload = id;
       }
+      console.log("~>", this.payload, id);
       if (!this.message) {
         this.message = (that = idmap[this.id || 0])
           ? that
@@ -91,7 +94,7 @@
       var ref$;
       return ref$ = {
         name: this.name
-      }, ref$.id = this.id, ref$.message = this.message, ref$.stack = this.stack, ref$;
+      }, ref$.id = this.id, ref$.message = this.message, ref$.stack = this.stack, ref$.payload = this.payload, ref$;
     }
   });
   lderror.id = function(opt){
