@@ -122,6 +122,7 @@ To wrap them along with your own event handler, test its return value and procee
 Additional information can be added if needed:
 
  - redirect - instruct a redirect url in order to proper take care of this error.
+ - data - supplementary data (serializable)
 
 
 ## Customized Error ID
