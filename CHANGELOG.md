@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.4.3 (upcoming)
+
+ - add 1036 `reused passwords not allowed`
+
+
 ## v2.4.2
 
  - update payload only if given parameter is an object

@@ -39,7 +39,8 @@
     1032: "credential scheme mismatched",
     1033: "view failed to render",
     1034: "user not found",
-    1035: "payment rejected"
+    1035: "payment rejected",
+    1036: "reused passwords not allowed"
   };
   lderror = function(opt, id){
     var _id, that, e;

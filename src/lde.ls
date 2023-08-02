@@ -39,6 +39,7 @@ idmap = do
   1033: "view failed to render"
   1034: "user not found"
   1035: "payment rejected"
+  1036: "reused passwords not allowed"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->
