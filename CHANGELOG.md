@@ -3,6 +3,7 @@
 ## v2.4.3 (upcoming)
 
  - add 1036 `reused passwords not allowed`
+ - add 1037 `offline`
 
 
 ## v2.4.2
