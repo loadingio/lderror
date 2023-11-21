@@ -40,7 +40,9 @@
     1033: "view failed to render",
     1034: "user not found",
     1035: "payment rejected",
-    1036: "reused passwords not allowed"
+    1036: "reused passwords not allowed",
+    1037: "offline",
+    1038: "file too large"
   };
   lderror = function(opt, id){
     var _id, that, e;

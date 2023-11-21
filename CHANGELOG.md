@@ -4,6 +4,7 @@
 
  - add 1036 `reused passwords not allowed`
  - add 1037 `offline`
+ - add 1038 `file too large`
 
 
 ## v2.4.2
