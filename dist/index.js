@@ -42,7 +42,8 @@
     1035: "payment rejected",
     1036: "reused passwords not allowed",
     1037: "offline",
-    1038: "file too large"
+    1038: "file too large",
+    1039: "payment rejected"
   };
   lderror = function(opt, id){
     var _id, that, e;

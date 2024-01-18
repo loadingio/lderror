@@ -42,6 +42,7 @@ idmap = do
   1036: "reused passwords not allowed"
   1037: "offline"
   1038: "file too large"
+  1039: "payment rejected" # for suspicious user
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->
