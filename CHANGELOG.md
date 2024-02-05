@@ -1,6 +1,6 @@
 # Change Logs
 
-## v2.4.3 (upcoming)
+## v2.4.3
 
  - add 1036 `reused passwords not allowed`
  - add 1037 `offline`
