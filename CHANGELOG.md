@@ -5,6 +5,8 @@
  - add 1036 `reused passwords not allowed`
  - add 1037 `offline`
  - add 1038 `file too large`
+ - add 1039 `payment rejected` for suspicious user
+ - add 1040 `registration closed`
 
 
 ## v2.4.2
