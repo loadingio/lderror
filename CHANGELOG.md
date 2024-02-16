@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.4.4 (upcoming)
+
+ - add 1041 `resource possibly blocked by client`
+
+
 ## v2.4.3
 
  - add 1036 `reused passwords not allowed`

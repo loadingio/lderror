@@ -44,6 +44,7 @@ idmap = do
   1038: "file too large"
   1039: "payment rejected" # for suspicious user
   1040: "registration closed"
+  1041: "resource possibly blocked by client"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->

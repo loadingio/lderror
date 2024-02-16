@@ -44,7 +44,8 @@
     1037: "offline",
     1038: "file too large",
     1039: "payment rejected",
-    1040: "registration closed"
+    1040: "registration closed",
+    1041: "resource possibly blocked by client"
   };
   lderror = function(opt, id){
     var _id, that, e;
