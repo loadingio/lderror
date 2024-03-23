@@ -45,6 +45,7 @@ idmap = do
   1039: "payment rejected" # for suspicious user
   1040: "registration closed"
   1041: "resource possibly blocked by client"
+  1042: "3rd party service error"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->

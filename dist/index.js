@@ -45,7 +45,8 @@
     1038: "file too large",
     1039: "payment rejected",
     1040: "registration closed",
-    1041: "resource possibly blocked by client"
+    1041: "resource possibly blocked by client",
+    1042: "3rd party service error"
   };
   lderror = function(opt, id){
     var _id, that, e;

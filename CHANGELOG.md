@@ -3,6 +3,7 @@
 ## v2.4.4 (upcoming)
 
  - add 1041 `resource possibly blocked by client`
+ - add 1042 `3rd party service error`
 
 
 ## v2.4.3
