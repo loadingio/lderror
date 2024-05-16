@@ -104,7 +104,7 @@
     }
   });
   lderror.id = function(opt){
-    if (typeof opt === 'object' && opt.name === 'lderror' && opt.id) {
+    if (opt && typeof opt === 'object' && opt.name === 'lderror' && opt.id) {
       return opt.id;
     }
     return 0;

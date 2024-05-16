@@ -83,7 +83,7 @@ lderror.prototype = Object.create(Error.prototype) <<< do
   toObject: -> {name: @name} <<< @{id, message, stack, payload}
 
 lderror.id = (opt) ->
-  if typeof(opt) == \object and opt.name == \lderror and opt.id => return opt.id
+  if opt and typeof(opt) == \object and opt.name == \lderror and opt.id => return opt.id
   return 0
 
 lderror.message = (o) ->

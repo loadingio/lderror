@@ -1,9 +1,10 @@
 # Change Logs
 
-## v2.4.4 (upcoming)
+## v2.4.4
 
  - add 1041 `resource possibly blocked by client`
  - add 1042 `3rd party service error`
+ - fix bug: lderror.id didn't check argument for existence before accessing its property
 
 
 ## v2.4.3
