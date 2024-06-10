@@ -46,7 +46,8 @@
     1039: "payment rejected",
     1040: "registration closed",
     1041: "resource possibly blocked by client",
-    1042: "3rd party service error"
+    1042: "3rd party service error",
+    1043: "additional token required"
   };
   lderror = function(opt, id){
     var _id, that, e;

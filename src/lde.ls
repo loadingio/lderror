@@ -46,6 +46,7 @@ idmap = do
   1040: "registration closed"
   1041: "resource possibly blocked by client"
   1042: "3rd party service error"
+  1043: "additional token required"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->

@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.4.5 (upcoming)
+
+ - add 1043 `additional token required` 
+
+
 ## v2.4.4
 
  - add 1041 `resource possibly blocked by client`
