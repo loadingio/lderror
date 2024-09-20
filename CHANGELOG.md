@@ -3,6 +3,7 @@
 ## v2.4.5 (upcoming)
 
  - add 1043 `additional token required` 
+ - add 1044 `unsupported encoding`
 
 
 ## v2.4.4

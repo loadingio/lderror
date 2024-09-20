@@ -47,7 +47,8 @@
     1040: "registration closed",
     1041: "resource possibly blocked by client",
     1042: "3rd party service error",
-    1043: "additional token required"
+    1043: "additional token required",
+    1044: "unsupported encoding"
   };
   lderror = function(opt, id){
     var _id, that, e;
