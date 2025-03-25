@@ -4,6 +4,7 @@
 
  - add 1043 `additional token required` 
  - add 1044 `unsupported encoding`
+ - add 1045 `invalid token / code`
 
 
 ## v2.4.4

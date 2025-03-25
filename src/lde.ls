@@ -48,6 +48,7 @@ idmap = do
   1042: "3rd party service error"
   1043: "additional token required"
   1044: "unsupported encoding"
+  1045: "invalid token / code"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->

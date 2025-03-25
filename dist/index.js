@@ -48,7 +48,8 @@
     1041: "resource possibly blocked by client",
     1042: "3rd party service error",
     1043: "additional token required",
-    1044: "unsupported encoding"
+    1044: "unsupported encoding",
+    1045: "invalid token / code"
   };
   lderror = function(opt, id){
     var _id, that, e;
