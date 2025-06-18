@@ -49,7 +49,9 @@
     1042: "3rd party service error",
     1043: "additional token required",
     1044: "unsupported encoding",
-    1045: "invalid token / code"
+    1045: "invalid token / code",
+    1046: "network or cors issue",
+    1047: "abort"
   };
   lderror = function(opt, id){
     var _id, that, e;

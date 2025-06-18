@@ -49,6 +49,8 @@ idmap = do
   1043: "additional token required"
   1044: "unsupported encoding"
   1045: "invalid token / code"
+  1046: "network or cors issue"
+  1047: "abort"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->
