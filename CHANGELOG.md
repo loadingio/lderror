@@ -1,10 +1,12 @@
 # Change Logs
 
-## v2.4.5 (upcoming)
+## v2.4.5
 
  - add 1043 `additional token required` 
  - add 1044 `unsupported encoding`
  - add 1045 `invalid token / code`
+ - add 1046 `network or cors issue`
+ - add 1047 `abort`
 
 
 ## v2.4.4
