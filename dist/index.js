@@ -135,14 +135,19 @@
     };
     this.s = {};
     h = function(e){
-      var i;
+      var i, p;
       if (in$(i = lderror.id(e), this$.i)) {
         return;
       }
       this$.s[i] = 1;
-      this$.h(this$.r(i), e).then(function(){
-        return this$.s[i] = 0;
-      });
+      p = this$.h(this$.r(i), e);
+      if (!(p && p.then)) {
+        this$.s[i] = 0;
+      } else {
+        p.then(function(){
+          return this$.s[i] = 0;
+        });
+      }
       if (!i) {
         console.log(e);
         throw e;

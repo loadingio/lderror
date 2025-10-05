@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.4.6
+
+ - fix bug: in handler, we didn't check return value of user function, which causes unexpected exceptions.
+
+
 ## v2.4.5
 
  - add 1043 `additional token required` 
