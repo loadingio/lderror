@@ -1,5 +1,10 @@
 # Change Logs
 
+## master
+
+ - add 1048 `captcha required`
+
+
 ## v2.4.6
 
  - fix bug: in handler, we didn't check return value of user function, which causes unexpected exceptions.

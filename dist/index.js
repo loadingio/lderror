@@ -51,7 +51,8 @@
     1044: "unsupported encoding",
     1045: "invalid token / code",
     1046: "network or cors issue",
-    1047: "abort"
+    1047: "abort",
+    1048: "captcha required"
   };
   lderror = function(opt, id){
     var _id, that, e;
