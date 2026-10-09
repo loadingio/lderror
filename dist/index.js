@@ -53,7 +53,8 @@
     1046: "network or cors issue",
     1047: "abort",
     1048: "captcha required",
-    1049: "too many attempts"
+    1049: "too many attempts",
+    1050: "code consumed"
   };
   lderror = function(opt, id){
     var _id, that, e;

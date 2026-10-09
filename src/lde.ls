@@ -53,6 +53,7 @@ idmap = do
   1047: "abort"
   1048: "captcha required"
   1049: "too many attempts"
+  1050: "code consumed"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->

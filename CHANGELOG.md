@@ -4,6 +4,7 @@
 
  - add 1048 `captcha required`
  - add 1049 `too many attempts`
+ - add 1050 `code consumed`
 
 
 ## v2.4.6
