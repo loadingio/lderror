@@ -1,6 +1,6 @@
 # Change Logs
 
-## master
+## v2.4.7
 
  - add 1048 `captcha required`
  - add 1049 `too many attempts`
