@@ -52,7 +52,8 @@
     1045: "invalid token / code",
     1046: "network or cors issue",
     1047: "abort",
-    1048: "captcha required"
+    1048: "captcha required",
+    1049: "too many attempts"
   };
   lderror = function(opt, id){
     var _id, that, e;

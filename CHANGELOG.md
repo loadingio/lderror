@@ -3,6 +3,7 @@
 ## master
 
  - add 1048 `captcha required`
+ - add 1049 `too many attempts`
 
 
 ## v2.4.6
