@@ -1,6 +1,6 @@
 # Change Logs
 
-## v2.4.8 (upcoming)
+## v2.4.8
 
  - add 1051 `ip not allowed`
 
