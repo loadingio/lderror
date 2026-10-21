@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.4.8 (upcoming)
+
+ - add 1051 `ip not allowed`
+
+
 ## v2.4.7
 
  - add 1048 `captcha required`
