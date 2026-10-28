@@ -55,6 +55,7 @@ idmap = do
   1049: "too many attempts"
   1050: "code consumed"
   1051: "ip not allowed"
+  1052: "account not activated"
   # 10000 ~ 29999 preserved for customized error
 
 lderror = (opt="", id = 0) ->

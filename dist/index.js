@@ -55,7 +55,8 @@
     1048: "captcha required",
     1049: "too many attempts",
     1050: "code consumed",
-    1051: "ip not allowed"
+    1051: "ip not allowed",
+    1052: "account not activated"
   };
   lderror = function(opt, id){
     var _id, that, e;

@@ -1,5 +1,10 @@
 # Change Logs
 
+## v2.4.9
+
+ - add 1052 `account not activated`
+
+
 ## v2.4.8
 
  - add 1051 `ip not allowed`
